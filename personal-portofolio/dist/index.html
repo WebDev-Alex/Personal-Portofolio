@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Personal Portofolio</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <div id="main">
+    <div id="circle">
+      <div id="astronaut">
+        <div class="button" id="about">About</div>
+      </div>
+      <div id="sattelite">
+        <div class="button" id="projects">Projects</div>
+      </div>
+      <div id="sun">
+        <div></div>
+      </div>
+      <div id="moon">
+        <div class="button" id="contact"><span style="border:1px solid white;border-radius:1em;padding:2px;">Contact</span><br>|</div>
+      </div>
+
+      <div id="alien_ship">
+        <div id="quotes_page"></div>
+      </div>
+
+      <div id="dim2">
+        <img src="https://imgur.com/VTNbF8c.gif" id="bh">
+      </div>
+    </div>
+
+    <div class="buttons" id="left_button">
+      < </div>
+        <div class="buttons" id="right_button"> > </div>
+        <img src="https://imgur.com/ZtVo9SJ.jpg" id="planet" alt="planet"></img>
+        <div id="nav">
+          <img id="my_img" src="https://www.sololearn.com/icons/avatars/7938943.jpg">
+          <span class="fa fa-gears"></span>
+          <span class="fa fa-send-o" onclick="go_to(-180)"></span>
+          <span class="fa fa-gamepad" onclick="go_to(-90)"></span>
+          <span class="fa fa-address-card" onclick="go_to(0)"></span>
+        </div>
+    </div>
+
+    <!--About page-->
+    <div id="container">
+      <div class="grid-container">
+        <div class="area1">
+          <h3>Details<span id="close" onclick="open_page('container')">x<span></h3>
+          <p>Name: Alex Tusinean</p>
+          <p>Age: 20</p>
+          <p>Gender: Male</p>
+          <p>Occupation: Student</p>
+          <p>Location: Earth</p>
+        </div>
+        <div class="area2">
+          <h3>Skills</h3>
+          <div>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">jQuery</span>
+            <span class="skill">C#</span>
+            <span class="skill">C++</span>
+            <span class="skill">Java</span>
+            <span class="skill">Powerpoint</span>
+            <span class="skill">Word</span>
+            <span class="skill">Excel</span>
+            <span class="skill">Python</span>
+          </div>
+        </div>
+        <div class="area3">
+          <h3>Passions</h3>
+          <span class="skill">Programming</span>
+          <span class="skill">Game development</span>
+          <span class="skill">Web Art</span>
+          <span class="skill">Stories (SF / Horror)</span>
+          <span class="skill">Badminton</span>
+          <span class="skill">Tennis</span>
+          <span class="skill">Reading</span>
+        </div>
+        <div class="my_image">
+
+        </div>
+      </div>
+    </div>
+    <!--Projects page-->
+
+    <div id="cards-container">
+      <h3 style="cursor:pointer;" onclick="open_page('cards-container')"><i class="fa fa-arrow-circle-left"></i> Back</h3>
+      <h3>Games <span class="fa fa-gamepad"></span></h3>
+      <div class="element">
+        <!--1-->
+        <div class="obj">
+          <img src="https://imgur.com/nGgNSRo.jpg" class=obj-img>
+          <div class="project_title">Flappy Bird</div>
+          <a href="https://codepen.io/AlexTAG/pen/XWjWbxg" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--2-->
+        <div class="obj">
+          <img src="https://imgur.com/4w4OsIf.jpg" class=obj-img>
+          <div class="project_title">Murder Mystery</div>
+          <a href="https://codepen.io/AlexTAG/pen/MWePEoj" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--3-->
+        <div class="obj">
+          <img src="https://imgur.com/3Fugmg2.jpg" class=obj-img>
+          <div class="project_title">Christmas</div>
+          <a href="https://codepen.io/AlexTAG/pen/gOwPvQR" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--4-->
+        <div class="obj">
+          <img src="https://imgur.com/If3tptX.jpg" class=obj-img>
+          <div class="project_title">Zombie Run</div>
+          <a href="https://codepen.io/AlexTAG/pen/BazqwzE" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--5-->
+        <div class="obj">
+          <img src="https://imgur.com/9HVV82i.jpg" class=obj-img>
+          <div class="project_title">Fast Food</div>
+          <a href="https://codepen.io/AlexTAG/pen/YzWJreJ" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--6-->
+        <div class="obj">
+          <img src="https://imgur.com/1OzLXEr.jpg" class=obj-img>
+          <div class="project_title">Lost in the Caves</div>
+          <a href="https://codepen.io/AlexTAG/pen/jOreGRV" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--7-->
+        <div class="obj">
+          <img src="https://imgur.com/d91671T.jpg" class=obj-img>
+          <div class="project_title">Hangman Unlimited</div>
+          <a href="https://codepen.io/AlexTAG/pen/dyXgVrw" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--8-->
+        <div class="obj">
+          <img src="https://imgur.com/SvpSpK4.jpg" class=obj-img>
+          <div class="project_title">Hidden Cards</div>
+          <a href="https://codepen.io/AlexTAG/pen/abZRLVV" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--9-->
+        <div class="obj">
+          <img src="https://imgur.com/TFgG7MQ.jpg" class=obj-img>
+          <div class="project_title">Lava is Rising</div>
+          <a href="https://code.sololearn.com/W633K7RqhVca/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--10-->
+        <div class="obj">
+          <img src="https://imgur.com/F2QRjku.jpg" class=obj-img>
+          <div class="project_title">Find the Letter</div>
+          <a href="https://code.sololearn.com/W41zc7NAPUDl/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--11-->
+        <div class="obj">
+          <img src="https://imgur.com/EnK6ln5.jpg" class=obj-img>
+          <div class="project_title">Ghost Hunters</div>
+          <a href="https://code.sololearn.com/WM7m64H6q9j2/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--12-->
+        <div class="obj">
+          <img src="https://imgur.com/2hFwXQq.jpg" class=obj-img>
+          <div class="project_title">A Story with Thieves</div>
+          <a href="https://code.sololearn.com/W5xU6PrXx3zr/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+      </div>
+      <h3>CSS Arts <span class="fa fa-paint-brush"></span></h3>
+      <div class="element">
+        <!--1-->
+        <div class="obj">
+          <img src="https://imgur.com/pmsgh1o.jpg" class=obj-img>
+          <div class="project_title">CSS Slenderman</div>
+          <a href="https://code.sololearn.com/WRWu4fdmLcmb/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--2-->
+        <div class="obj">
+          <img src="https://imgur.com/w5sl8PB.jpg" class=obj-img>
+          <div class="project_title">1 Div Weapons</div>
+          <a href="https://code.sololearn.com/WmB8lFC4o15Y" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--3-->
+        <div class="obj">
+          <img src="https://imgur.com/NhQFkkP.jpg" class=obj-img>
+          <div class="project_title">Romanian Flag</div>
+          <a href="https://code.sololearn.com/W8Y4hm4QZ5c1/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--4-->
+        <div class="obj">
+          <img src="https://imgur.com/uK7jOzP.jpg" class=obj-img>
+          <div class="project_title">Among Us Art</div>
+          <a href="https://code.sololearn.com/Wnj1a5ULTz4I/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--5-->
+        <div class="obj">
+          <img src="https://imgur.com/BerNph9.jpg" class=obj-img>
+          <div class="project_title">Chainsaw</div>
+          <a href="https://code.sololearn.com/WEMz4oBs2581/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--6-->
+        <div class="obj">
+          <img src="https://imgur.com/g97ncIn.jpg" class=obj-img>
+          <div class="project_title">Hand Watch</div>
+          <a href="https://code.sololearn.com/WdccD3XAF9Xi/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--7-->
+        <div class="obj">
+          <img src="https://imgur.com/p9z56AT.jpg" class=obj-img>
+          <div class="project_title">Tree in snow</div>
+          <a href="https://code.sololearn.com/WF8hsMYmtA4t/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--8-->
+        <div class="obj">
+          <img src="https://imgur.com/K9q9fey.jpg" class=obj-img>
+          <div class="project_title">Cherries</div>
+          <a href="https://code.sololearn.com/W3VooBArVhe6/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+      </div>
+      <h3>Websites <span class="fa fa-book"></span></h3>
+      <div class="element">
+        <!--1-->
+        <div class="obj">
+          <img src="https://imgur.com/HZhoPBG.jpg" class=obj-img>
+          <div class="project_title">Portofolio</div>
+          <a href="https://codepen.io/AlexTAG/pen/eYBdXPZ" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--2-->
+        <div class="obj">
+          <img src="https://imgur.com/CkIkV4t.jpg" class=obj-img>
+          <div class="project_title">Sword Nav Website</div>
+          <a href="https://code.sololearn.com/WCce8ODi55OT/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--3-->
+        <div class="obj">
+          <img src="https://imgur.com/Gh8hcPk.jpg" class=obj-img>
+          <div class="project_title">Legend of Dracula</div>
+          <a href="https://code.sololearn.com/WVhXus2ukgIw/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--4-->
+        <div class="obj">
+          <img src="https://imgur.com/ySGIBn8.jpg" class=obj-img>
+          <div class="project_title">Game of Thrones</div>
+          <a href="https://code.sololearn.com/W3dWhKhE6WMY/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--5-->
+        <div class="obj">
+          <img src="https://imgur.com/gAMtW6P.jpg" class=obj-img>
+          <div class="project_title">Police</div>
+          <a href="https://code.sololearn.com/WgBQum0l2vD5/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--6-->
+        <div class="obj">
+          <img src="https://imgur.com/XcTZ7A0.jpg" class=obj-img>
+          <div class="project_title">Christmas Website</div>
+          <a href="https://code.sololearn.com/WbkB6tbbR8Jm/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+      </div>
+      <h3>Others <span class="fa fa-plus-circle"></span></h3>
+      <div class="element">
+        <!--1-->
+        <div class="obj">
+          <img src="https://imgur.com/TjYbZBl.jpg" class=obj-img>
+          <div class="project_title">Strange Planets</div>
+          <a href="https://code.sololearn.com/WUrkuDJEk3bU/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--2-->
+        <div class="obj">
+          <img src="https://imgur.com/9i2647p.jpg" class=obj-img>
+          <div class="project_title">Planets Navigation</div>
+          <a href="https://code.sololearn.com/W28pEDYDiK9S/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--3-->
+        <div class="obj">
+          <img src="https://imgur.com/Ht7qOwU.jpg" class=obj-img>
+          <div class="project_title">Cosmic Calculator</div>
+          <a href="https://code.sololearn.com/WZe726b1K8bH/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--4-->
+        <div class="obj">
+          <img src="https://imgur.com/kSaqG6Y.jpg" class=obj-img>
+          <div class="project_title">Animal Soul</div>
+          <a href="https://code.sololearn.com/Wal08iIdabS6/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--5-->
+        <div class="obj">
+          <img src="https://imgur.com/Nxbkmaz.jpg" class=obj-img>
+          <div class="project_title">Notebook</div>
+          <a href="https://code.sololearn.com/WcR00ubhTOwQ/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--6-->
+        <div class="obj">
+          <img src="https://imgur.com/7p2bul5.jpg" class=obj-img>
+          <div class="project_title">Fight Simulator</div>
+          <a href="https://code.sololearn.com/Wzy68gahP8OL/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--7-->
+        <div class="obj">
+          <img src="https://imgur.com/mWr7i0Q.jpg" class=obj-img>
+          <div class="project_title">Templar Cypher</div>
+          <a href="https://code.sololearn.com/WQ04WB0I92EZ/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+        <!--8-->
+        <div class="obj">
+          <img src="https://imgur.com/3VNWio8.jpg" class=obj-img>
+          <div class="project_title">Bloody Mary</div>
+          <a href="https://code.sololearn.com/WzAFQb4PTS2C/#" target='_blank' class="glyphicon glyphicon-play-circle"></a>
+        </div>
+      </div>
+    </div>
+
+    <!--Contact-page-->
+    <div id="contact-container">
+      <i class="fa fa-facebook-official"></i>
+      <i class="fa fa-codepen"></i>
+      <i class="fa fa-free-code-camp"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-phone-square"></i>
+      <i class="fa fa-send-o"></i>
+      <i class="fa fa-youtube-play"></i>
+      <div id="contact-x">x</div>
+      <div id="help-sign">
+        What can I help you with?
+      </div>
+    </div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

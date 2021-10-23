@@ -1,0 +1,735 @@
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  opacity:0;
+  transition:opacity 1s;
+}
+
+#circle {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  width: 200vh;
+  height: 200vh;
+  border-radius: 50%;
+  transition: transform 0.04s;
+  color: white;
+  background: black;
+  transition-timing-function: linear;
+  user-select: none;
+}
+
+#planet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+  max-height: 60vh;
+  z-index: 3;
+  pointer-events: none;
+  display: block;
+}
+
+.buttons {
+  position: fixed;
+  width: 50px;
+  height: calc(100vh - 50px);
+  background: rgba(25, 25, 25);
+  top: 50px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  line-height: 100vh;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  cursor: default;
+  user-select: none;
+}
+
+#left_button {
+  left: 0;
+}
+#right_button {
+  right: 0;
+}
+
+.buttons:hover {
+  opacity: 0.7;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  color: red;
+  background: white;
+  left: 0;
+  top: 0;
+  border-radius: 25%;
+  box-shadow: 0 0 2px yellow;
+}
+
+#sattelite, #astronaut, #moon, #sun, #dim2{
+  z-index:2;
+  position:absolute;
+}
+
+#sattelite {
+  top: 50%;
+  left: 85%;
+  width: 140px;
+  height: 145px;
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.9);
+  background: url("https://imgur.com/VMdvPNy.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s;
+}
+
+#sattelite:hover {
+  transform: translate(-50%, -50%) rotate(90deg) scale(1);
+}
+
+.button {
+  position: absolute;
+  width: auto;
+  height: auto;
+  color: white;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  cursor: pointer;
+}
+
+#projects {
+  left: 51%;
+  top: 16%;
+  transform: rotate(-21deg);
+}
+
+#astronaut {
+  width: 120px;
+  height: 140px;
+  background: url("https://imgur.com/8Bbrznf.jpg");
+  background-size: cover;
+  background-position: center;
+  left: 50%;
+  top: 15vh;
+  transform: translate(-50%) scale(0.9);
+  transition: transform 0.5s;
+}
+
+#astronaut:hover {
+  transform: translate(-50%) scale(1);
+}
+
+#about {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  margin: 0;
+  padding: 0;
+}
+
+#moon {
+  width: 130px;
+  height: 130px;
+  background: url("https://imgur.com/QsTxX9E.jpg");
+  background-size: cover;
+  background-position: center;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%) rotate(180deg) scale(0.93);
+  transition: transform 0.5s;
+}
+
+#contact {
+  position: absolute;
+  left: 70%;
+  top: -18px;
+  line-height: 70%;
+  transform: translate(-50%);
+}
+
+#moon:hover {
+  transform: translate(-50%, -50%) rotate(180deg) scale(1);
+}
+
+#main {
+  display: block;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+}
+
+/*About page*/
+#container {
+  background: url("https://imgur.com/2x8RXqR.jpg");
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  box-shadow: inset 0 0 3px black;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+
+#container::-webkit-scrollbar {
+  display: none;
+}
+
+.grid-container {
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  min-height: 90vh;
+  left: 5vw;
+  top: 5vh;
+  background: transparent;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "image area1 area1 area1"
+    "image area2 area2 area2"
+    "image area3 area3 area3";
+}
+.area1 {
+  grid-area: area1;
+}
+.area2 {
+  grid-area: area2;
+}
+.area3 {
+  grid-area: area3;
+}
+.my_image {
+  grid-area: image;
+}
+
+.my_image {
+  width: 25vw;
+  max-width: 300px;
+  min-width: 100px;
+  min-height: 150px;
+  height: 90%;
+  max-height: 750px;
+  background: white;
+  position: relative;
+  place-self: center;
+  box-shadow: inset 0 0 25px black;
+  clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
+  background: white url("https://imgur.com/I7UtLDw.jpg");
+  background-size: auto 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: box-shadow 0.5s;
+}
+
+.my_image:hover {
+  box-shadow: inset 0 0 26px purple, inset 0 0 20px purple;
+}
+
+.skill {
+  border: 2px solid white;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 1em;
+  font-size: 90%;
+  margin: 4px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.skill:hover{
+  box-shadow:0 0 8px white;
+  cursor:default;
+}
+
+@media only screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1ft;
+    grid-template-areas:
+      "image image image"
+      "area1 area1 area1"
+      "area2 area2 area2"
+      "area3 area3 area3";
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+#container {
+  display: none;
+}
+
+#close {
+  float: right;
+  background: darkred;
+  width: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+/*About page*/
+
+#sun {
+  width: 140px;
+  height: 140px;
+  background: url("https://imgur.com/4XmwoFy.jpg");
+  background-size: 100%;
+  background-position: center;
+  left: 15%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9) rotate(180deg);
+  transition: transform 0.5s;
+  box-shadow: 0 0 30px orange, inset 0 0 12px orange, inset 0 0 5px red,
+    inset 0 0 13px orange;
+  border-radius: 50%;
+}
+
+#sun:hover::after{
+  content:"Today is the best day to shine!";
+  position:absolute;
+  height:auto;
+  min-width:100%;
+  text-align:center;
+  background:rgba(50, 50, 50, 0.5);
+  padding:4px;
+  left:123%; top:50%;
+  transform:translate(-50%, -50%) rotate(90deg);
+}
+
+.point {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: white;
+  z-index: -1;
+}
+
+#dim2 {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  left: 75%;
+  top: 75%;
+  transform: translate(-50%, -50%) rotate(142deg);
+}
+
+#bh {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#dim2:hover::after {
+  content: "Mirror Dimension";
+  position: absolute;
+  left: 50%;
+  top: -0.5em;
+  transform: translate(-50%);
+  background: rgba(100, 100, 100, 0.1);
+  width: 8em;
+  height: auto;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  font-size: 90%;
+}
+
+/*Projects*/
+#cards-container {
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: url("https://imgur.com/2x8RXqR.jpg");
+  background-size: cover;
+  background-position: left;
+  color: white;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: none;
+  transform: scale(0);
+  transition: transform 0.5s;
+  font-size:19px;
+}
+
+#cards-container::-webkit-scrollbar,
+.element::-webkit-scrollbar {
+  display: none;
+}
+
+#cards-container h3 {
+  margin-left: 15px;
+}
+
+.element {
+  position: relative;
+  width: calc(100vw - 30px);
+  height: auto;
+  margin: 15px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  overflow-x: scroll;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  perspective: 75vmax;
+  background: transparent;
+}
+
+.obj {
+  display: flex;
+  position: relative;
+  width: 100px;
+  height: 105px;
+  min-width: 100px;
+  transition: transform 0.3s;
+  border-radius: 5px;
+  transform-origin: 50% 0;
+}
+
+.obj-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-radius: 5px;
+}
+
+.obj::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  transition: all 1s;
+  border-radius: 5px;
+}
+
+.obj::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 105px;
+  transition: all 1s;
+  border-radius: 5px;
+  background: silver;
+  z-index: -1;
+}
+
+.obj:hover {
+  transform: rotatex(10deg);
+}
+
+.obj:hover .project_title {
+  opacity: 1;
+}
+
+.obj:hover::after {
+  content: "";
+  background: linear-gradient(
+    220deg,
+    rgba(255, 255, 255, 0.3),
+    transparent 25%,
+    rgba(255, 255, 255, 0.3),
+    transparent 50%
+  );
+}
+
+/*@media only screen and (max-width: 480px) {  
+  h3{
+    text-align:center;
+    margin-left:0;
+  }
+}*/
+
+.project_title {
+  color: black;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  bottom: 0;
+  font-size:16px;
+  transform: translate(-50%);
+  user-select: none;
+  transition: opacity 0.3s;
+  background: rgba(250, 250, 250, 0.6);
+}
+
+.glyphicon {
+  position: absolute;
+  display: block;
+  color: black;
+  left: calc(100% - 23px);
+  z-index: 1;
+  font-size: 20px;
+  background: transparent;
+  height: 1em;
+  padding-top: 3px;
+  text-shadow: 0 0 1px white;
+}
+
+.glyphicon,
+.glyphicon:hover,
+.glyphicon:focus,
+.glyphicon:active {
+  text-decoration: none;
+  color: black;
+}
+
+.fa-paint-brush,
+.fa-gamepad,
+.fa-book,
+.fa-plus-circle {
+  displayinline-: block;
+  color: white;
+  position: relative;
+  margin: 0;
+  float: right;
+  margin-right: 1em;
+}
+
+/*Contact*/
+#contact-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://imgur.com/uaAuZKR.jpg");
+  background-size: cover;
+  background-position: center;
+  display: none;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+
+#contact-container .fa {
+  color: white;
+  position: absolute;
+  width: auto;
+  height: auto;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.fa-facebook-official {
+  left: 10%;
+  top: 15%;
+}
+
+#contact-container .fa:hover {
+  transform: scale(1.15);
+}
+
+#contact-container .fa-facebook-official:hover {
+  color: #3b5998;
+}
+
+.fa-codepen {
+  left: 22%;
+  top: 31%;
+}
+
+.fa-free-code-camp {
+  left: 40%;
+  top: 25%;
+}
+
+.fa-instagram {
+  left: 51%;
+  top: 12%;
+}
+
+#contact-container .fa-instagram:hover {
+  color: magenta;
+}
+
+.fa-phone-square {
+  left: 61%;
+  top: 36%;
+}
+#contact-container .fa-phone-square:hover {
+  color: lime;
+}
+
+.fa-send-o {
+  left: 70%;
+  top: 19%;
+}
+#contact-container .fa-send-o:hover {
+  color: aqua;
+}
+
+.fa-youtube-play {
+  left: 82%;
+  top: 28%;
+}
+
+#contact-container .fa-youtube-play:hover {
+  color: red;
+}
+
+#help-sign {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  padding: 1.3em;
+  font-size: 1.2em;
+  background: linear-gradient(to right, grey, silver, grey);
+  color: black;
+  bottom: 25vh;
+  left: 10vw;
+  box-shadow: -2px -2px 6px black;
+  font-weight: 550;
+}
+
+#help-sign::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 25vh;
+  bottom: -25vh;
+  left: 11%;
+  background: linear-gradient(to right, grey, silver, grey);
+  box-shadow: -3px 3px 5px black;
+}
+
+#help-sign::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 25vh;
+  bottom: -25vh;
+  right: 11%;
+  background: linear-gradient(to right, grey, silver, grey);
+  box-shadow: -3px 3px 5px black;
+}
+
+#contact-x {
+  position: absolute;
+  left: 90%;
+  top: 10%;
+  color: white;
+  border-radius: 2em;
+  width: 1.2em;
+  height: auto;
+  text-align: center;
+  border: 2px solid white;
+  box-shadow: 0 0 5px orange, 0 0 16px orange, 0 0 5px gold, inset 0 0 5px orange;
+  cursor: pointer;
+}
+
+#alien_ship {
+  position: absolute;
+  width: 105px;
+  height: 100px;
+  background: url("https://imgur.com/8xXFxwr.jpg");
+  background-size: cover;
+  background-position: center;
+  left: 25%;
+  top: 74%;
+  transform: translate(-50%, -50%) rotate(-115deg);
+}
+
+#quotes_page {
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 150%;
+  left: 15%;
+  bottom: 85%;
+  transform: translate(-50%) rotate(-22deg);
+  display: none;
+  background: rgba(200, 200, 200, 0.1);
+  font-size: 90%;
+  padding: 5px;
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px 0 10px 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85),
+    rgba(20, 20, 20, 0.5)
+  );
+  font-size: 19px;
+  margin: 0;
+  color: white;
+  border-bottom: 2px solid #444;
+}
+
+#nav .fa {
+  float: right;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 6px 10px 6px 8px;
+  cursor:pointer;
+}
+
+#nav .fa:hover{
+  color:#999999;
+}
+
+#my_img {
+  position: absolute;
+  display: inline;
+  width: auto;
+  height: 90%;
+  margin: 0;
+  left: 5px;
+  top: 5%;
+  border-radius: 50%;
+}
